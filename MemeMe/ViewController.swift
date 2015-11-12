@@ -105,7 +105,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imagePickerView.image = image
-            self.dismissViewControllerAnimated(true, completion: nil)
+            dismissViewControllerAnimated(true, completion: nil)
         }
     }
     
@@ -186,7 +186,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         
         // render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
-        self.view.drawViewHierarchyInRect(self.view.frame,
+        view.drawViewHierarchyInRect(self.view.frame,
             afterScreenUpdates: true)
         let memedImage : UIImage =
         UIGraphicsGetImageFromCurrentImageContext()
@@ -220,7 +220,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         // code fixed after looking up https://discussions.udacity.com/t/finishing-meme1-0-but-still-stuck/33854/28
         let memedImage = generateMemedImage()
         let controller = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
-        self.presentViewController(controller, animated: true, completion: nil)
+        presentViewController(controller, animated: true, completion: nil)
         
         controller.completionWithItemsHandler = {
             (activity: String?, completed: Bool, items: [AnyObject]?, error: NSError?) -> Void in
