@@ -14,7 +14,6 @@ class MemeCollectionViewController: UICollectionViewController {
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
-    
     // MARK: variable declarations
     
     // access meme array stored in AppDelegate

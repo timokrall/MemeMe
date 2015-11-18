@@ -9,8 +9,8 @@
 import UIKit
 import AVFoundation
 
-// don't set the MemeEditorViewController as the initial view controller or otherwise the view controller could not be dismissed properly after a meme is saved
-// hint for setting tab bar controller as initial view controller by OSteven in https://discussions.udacity.com/t/nsunknownkeyexception-when-clicking-on-stored-memes/38568/2
+// set tab bar controller as initial view controller after reading hint by OSteven at https://discussions.udacity.com/t/nsunknownkeyexception-when-clicking-on-stored-memes/38568/2
+// do not set the MemeEditorViewController as the initial view controller or otherwise the view controller could not be dismissed properly after a meme is saved
 
 class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UITextFieldDelegate {
@@ -301,7 +301,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
                 // save image
                 self.save()
                 
-                // TODO: dismiss activity controller
+                // dismiss activity controller
                 self.dismissViewControllerAnimated(true, completion: nil)
                 
                 // delete old meme
@@ -311,7 +311,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
                 
                 }
                     
-                // TODO: return to MemeCollectionViewController
+                // return to MemeCollectionViewController
                 self.navigationController?.popToRootViewControllerAnimated(true)
 
             }

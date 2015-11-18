@@ -67,7 +67,7 @@ class MemeTableViewController: UITableViewController {
     // essential table function: what happens if cell is selected by the user
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        // TODO: launch MemeDetailViewController
+        // launch MemeDetailViewController
         let detailController = storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         
         // each cell in the table is associated with a different meme

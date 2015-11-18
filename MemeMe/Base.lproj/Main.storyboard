@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -291,9 +290,7 @@
                             <constraint firstItem="cKU-xe-p5Q" firstAttribute="top" secondItem="zJ9-Lg-Tmv" secondAttribute="bottom" id="5Hl-wH-g9r"/>
                             <constraint firstItem="zJ9-Lg-Tmv" firstAttribute="centerX" secondItem="cWm-Oz-KkZ" secondAttribute="centerX" id="6Zf-nb-FcN"/>
                             <constraint firstItem="cKU-xe-p5Q" firstAttribute="width" secondItem="cWm-Oz-KkZ" secondAttribute="width" id="7s7-Yw-BOm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cKU-xe-p5Q" secondAttribute="trailing" constant="-20" id="J74-IN-SFR"/>
                             <constraint firstItem="o2t-QL-vAj" firstAttribute="top" secondItem="cKU-xe-p5Q" secondAttribute="bottom" id="Xeb-eV-z1m"/>
-                            <constraint firstItem="cKU-xe-p5Q" firstAttribute="leading" secondItem="cWm-Oz-KkZ" secondAttribute="leadingMargin" constant="-20" id="kLb-7F-nrs"/>
                             <constraint firstItem="cKU-xe-p5Q" firstAttribute="leading" secondItem="zJ9-Lg-Tmv" secondAttribute="leading" id="rpZ-fY-IR7"/>
                             <constraint firstItem="zJ9-Lg-Tmv" firstAttribute="top" secondItem="jto-ST-K2P" secondAttribute="bottom" id="tGo-TR-qqS"/>
                         </constraints>
