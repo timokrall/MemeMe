@@ -7,7 +7,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Created Memes-->
+        <!--Sent Memes-->
         <scene sceneID="PaT-Lp-VNM">
             <objects>
                 <collectionViewController id="P4k-4p-wyg" customClass="MemeCollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="P4k-4p-wyg" id="2QH-W9-La7"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Created Memes" id="aQ0-ka-ufD">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="aQ0-ka-ufD">
                         <barButtonItem key="rightBarButtonItem" title="+" id="ASP-iY-kRW">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="58Y-fc-zOW"/>
@@ -102,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="-731" y="1261"/>
         </scene>
-        <!--Created Memes-->
+        <!--Sent Memes-->
         <scene sceneID="r25-0V-o6a">
             <objects>
                 <tableViewController id="QK8-4a-hQn" customClass="MemeTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -128,7 +128,7 @@
                             <outlet property="delegate" destination="QK8-4a-hQn" id="EuK-c8-SPU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Created Memes" id="bjT-Ze-lWY">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="bjT-Ze-lWY">
                         <barButtonItem key="rightBarButtonItem" title="+" id="oqm-mU-Onr">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="Zst-Ue-qVP"/>
@@ -173,7 +173,7 @@
                                     <barButtonItem systemItem="cancel" id="Km4-yX-wsA">
                                         <connections>
                                             <action selector="cancelMemedImage:" destination="BYZ-38-t0r" id="sJp-uQ-GIT"/>
-                                            <segue destination="Roq-c0-lU3" kind="show" id="rZa-DO-SGA"/>
+                                            <segue destination="Roq-c0-lU3" kind="presentation" id="rZa-DO-SGA"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -286,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xV-bA-5hN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="819"/>
+            <point key="canvasLocation" x="839" y="819"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="K72-dm-9Do">
@@ -314,6 +314,6 @@
         <image name="table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zst-Ue-qVP"/>
+        <segue reference="58Y-fc-zOW"/>
     </inferredMetricsTieBreakers>
 </document>

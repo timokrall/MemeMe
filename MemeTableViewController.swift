@@ -30,6 +30,10 @@ class MemeTableViewController: UITableViewController {
         // make tab bar visible
         tabBarController?.tabBar.hidden = false
         
+        // display the navigation bar
+        // code found at http://stackoverflow.com/questions/29209453/how-to-hide-a-navigation-bar-from-first-viewcontroller-in-swift
+        self.navigationController?.navigationBarHidden = false
+        
     }
     
     
