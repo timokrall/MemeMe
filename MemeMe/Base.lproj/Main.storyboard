@@ -29,7 +29,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="121" height="121"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oAd-NZ-K2I">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oAd-NZ-K2I">
                                             <rect key="frame" x="0.0" y="0.0" width="121" height="121"/>
                                             <animations/>
                                         </imageView>
@@ -178,6 +178,18 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <textField autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MoA-7c-hhX">
+                                <rect key="frame" x="20" y="70" width="374" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQc-VY-kgx">
+                                <rect key="frame" x="20" y="669" width="374" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jO0-jr-lep">
                                 <rect key="frame" x="0.0" y="696" width="414" height="40"/>
                                 <animations/>
@@ -200,18 +212,6 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ep1-WS-b2S"/>
                                 </items>
                             </toolbar>
-                            <textField autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MoA-7c-hhX">
-                                <rect key="frame" x="20" y="70" width="374" height="17"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQc-VY-kgx">
-                                <rect key="frame" x="20" y="669" width="374" height="17"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -272,12 +272,13 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="o2t-QL-vAj" firstAttribute="top" secondItem="cKU-xe-p5Q" secondAttribute="bottom" id="0d1-9M-PtD"/>
-                            <constraint firstItem="cKU-xe-p5Q" firstAttribute="leading" secondItem="cWm-Oz-KkZ" secondAttribute="leadingMargin" constant="-20" id="ASX-ZI-6UK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cKU-xe-p5Q" secondAttribute="trailing" constant="-20" id="msU-Wc-c4r"/>
-                            <constraint firstItem="cKU-xe-p5Q" firstAttribute="top" secondItem="cWm-Oz-KkZ" secondAttribute="topMargin" id="zy7-nm-b0U"/>
+                            <constraint firstItem="cKU-xe-p5Q" firstAttribute="centerX" secondItem="cWm-Oz-KkZ" secondAttribute="centerX" id="F6V-JH-itY"/>
+                            <constraint firstItem="cKU-xe-p5Q" firstAttribute="top" secondItem="cWm-Oz-KkZ" secondAttribute="topMargin" id="GbQ-fX-QQV"/>
+                            <constraint firstItem="o2t-QL-vAj" firstAttribute="top" secondItem="cKU-xe-p5Q" secondAttribute="bottom" id="Jva-Cb-97a"/>
+                            <constraint firstItem="cKU-xe-p5Q" firstAttribute="width" secondItem="cWm-Oz-KkZ" secondAttribute="width" id="gdP-m5-plx"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="imageView" destination="cKU-xe-p5Q" id="r39-Yb-sIi"/>

@@ -34,13 +34,24 @@ class MemeDetailViewController: UIViewController {
         // hide tab bar
         tabBarController?.tabBar.hidden = true
         
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // generate a new button in the navigation bar and associate the meme editing action with it
+        // generate a new button in the navigation bar and associate the meme delete action with it
         // code found at https://www.hackingwithswift.com/example-code/uikit/how-to-add-a-bar-button-to-a-navigation-bar
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: "editMeme:")
+    
+        // create toolbar with trash icon that executes the deleteMeme function
+        // code found at https://www.hackingwithswift.com/example-code/uikit/how-to-show-and-hide-a-toolbar-inside-a-uinavigationcontroller
+        
+        let trash = UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: "deleteMeme:")
+        let spacer = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: self, action: nil)
+        
+        toolbarItems = [spacer, trash, spacer]
+        
+        navigationController?.setToolbarHidden(false, animated: false)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -48,7 +59,7 @@ class MemeDetailViewController: UIViewController {
         
         // show tab bar
         tabBarController?.tabBar.hidden = false
-
+        
     }
     
     // MARK: button actions
@@ -58,12 +69,22 @@ class MemeDetailViewController: UIViewController {
         // instantiate EditorViewController
         let memeEditorViewController = storyboard?.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
         
-        // pass meme and its indext to EditorViewContoller
+        // pass meme and its index to EditorViewContoller
         memeEditorViewController.memeToEdit = meme
         memeEditorViewController.memeToEditIndex = memeIndex
         
         // display EditorViewController
         navigationController?.pushViewController(memeEditorViewController, animated: true)
+    }
+    
+    @IBAction func deleteMeme(sender: UIBarButtonItem) {
+    
+        // delete currently edited meme
+        (UIApplication.sharedApplication().delegate as! AppDelegate).memes.removeAtIndex(memeIndex)
+        
+        // return to MemeCollectionViewController after meme is deleted
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    
     }
     
 }
