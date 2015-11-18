@@ -11,7 +11,10 @@ import UIKit
 class MemeDetailViewController: UIViewController {
 
     // MARK: outlets
+    
+    // added an outlet for imageView following a hint by OSteven https://discussions.udacity.com/t/nsunknownkeyexception-when-clicking-on-stored-memes/38568/2
     @IBOutlet weak var memeImageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
 
     // MARK: variable declarations
     var meme : Meme!
