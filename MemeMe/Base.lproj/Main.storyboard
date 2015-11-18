@@ -49,7 +49,6 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Created Memes" id="aQ0-ka-ufD">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="Bij-qQ-brk"/>
                         <barButtonItem key="rightBarButtonItem" title="+" id="ASP-iY-kRW">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="58Y-fc-zOW"/>
@@ -130,7 +129,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Created Memes" id="bjT-Ze-lWY">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="lOA-Eh-FWH"/>
                         <barButtonItem key="rightBarButtonItem" title="+" id="oqm-mU-Onr">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="Zst-Ue-qVP"/>
@@ -316,6 +314,6 @@
         <image name="table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="58Y-fc-zOW"/>
+        <segue reference="Zst-Ue-qVP"/>
     </inferredMetricsTieBreakers>
 </document>

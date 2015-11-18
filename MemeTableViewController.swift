@@ -79,5 +79,19 @@ class MemeTableViewController: UITableViewController {
         
         navigationController!.pushViewController(detailController, animated: true)
     }
+    
+    // table function that allows to define what happens if user swipes a row
+    // code found at http://stackoverflow.com/questions/29294099/delete-a-row-in-table-view-in-swift
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // describe what happens when user swipes the row and then clicks on delete
+        if editingStyle == .Delete {
+            
+                // delete the meme associated with the row that was swiped
+                (UIApplication.sharedApplication().delegate as! AppDelegate).memes.removeAtIndex(indexPath.row)
+                self.tableView.reloadData()
+        
+        }
+    }
 
 }
