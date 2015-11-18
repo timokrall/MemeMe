@@ -125,6 +125,10 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         // hide tab bar
         tabBarController?.tabBar.hidden = true
         
+        // hide navigation bar
+        // code found at http://stackoverflow.com/questions/29209453/how-to-hide-a-navigation-bar-from-first-viewcontroller-in-swift
+        self.navigationController?.navigationBarHidden = true
+        
     }
     
     override func viewDidLoad() {
@@ -148,6 +152,11 @@ UINavigationControllerDelegate, UITextFieldDelegate {
                 delegate: self,
                 attributes: memeTextAttributes,
                 alignment: .Center)
+            
+            
+            // temporarily deactivate sharing button if new meme is created
+            deactivateButtons()
+            
         } else {
             
             // keep texts and images if existing meme is edited
@@ -164,11 +173,11 @@ UINavigationControllerDelegate, UITextFieldDelegate {
                 alignment: .Center)
             
             imagePickerView.image = memeToEdit.originalImage
+            
+            
+            // ensure sharing button is active if existing meme is edited
+            activateButtons()
         }
-
-        
-        // temporarily deactivate sharing button
-        deactivateButtons()
 
         // enable delegate methods so that the delegate method can be called when enter is pressed
         textFieldBottom.delegate = self
@@ -186,8 +195,12 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     override func viewWillDisappear(animated: Bool) {
         unsubscribeFromKeyboardNotifications()
         
-        //Displays the tab bar
+        // display the tab bar
         tabBarController?.tabBar.hidden = false
+        
+        // display the navigation bar
+        // code found at http://stackoverflow.com/questions/29209453/how-to-hide-a-navigation-bar-from-first-viewcontroller-in-swift
+        self.navigationController?.navigationBarHidden = false
         
     }
     

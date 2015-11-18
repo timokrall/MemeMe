@@ -24,11 +24,23 @@ class MemeDetailViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        // display the memed image int he memeImageView
+        // display the memed image in the memeImageView
         memeImageView.image = meme.memedImage
+        
+        // display the navigation bar
+        // code found at http://stackoverflow.com/questions/29209453/how-to-hide-a-navigation-bar-from-first-viewcontroller-in-swift
+        self.navigationController?.navigationBarHidden = false
         
         // hide tab bar
         tabBarController?.tabBar.hidden = true
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // generate a new button in the navigation bar and associate the meme editing action with it
+        // code found at https://www.hackingwithswift.com/example-code/uikit/how-to-add-a-bar-button-to-a-navigation-bar
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: "editMeme:")
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -36,6 +48,7 @@ class MemeDetailViewController: UIViewController {
         
         // show tab bar
         tabBarController?.tabBar.hidden = false
+
     }
     
     // MARK: button actions
