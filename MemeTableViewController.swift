@@ -94,7 +94,7 @@ class MemeTableViewController: UITableViewController {
             
                 // delete the meme associated with the row that was swiped
                 (UIApplication.sharedApplication().delegate as! AppDelegate).memes.removeAtIndex(indexPath.row)
-                self.tableView.reloadData()
+                tableView.reloadData()
         
         }
     }

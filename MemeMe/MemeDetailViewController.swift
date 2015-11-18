@@ -29,7 +29,7 @@ class MemeDetailViewController: UIViewController {
         
         // display the navigation bar
         // code found at http://stackoverflow.com/questions/29209453/how-to-hide-a-navigation-bar-from-first-viewcontroller-in-swift
-        self.navigationController?.navigationBarHidden = false
+        navigationController?.navigationBarHidden = false
         
         // hide tab bar
         tabBarController?.tabBar.hidden = true

@@ -28,7 +28,7 @@ class MemeCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         let space: CGFloat = 3.0
-        let dimension = (self.view.frame.size.width - (2 * space)) / 3.0
+        let dimension = (view.frame.size.width - (2 * space)) / 3.0
         
         // set spacing between cells
         flowLayout.minimumInteritemSpacing = space
@@ -45,7 +45,7 @@ class MemeCollectionViewController: UICollectionViewController {
         super.viewWillAppear(animated)
         
         // update data
-        self.collectionView!.reloadData()
+        collectionView!.reloadData()
         
         // set tab bar visible
         tabBarController?.tabBar.hidden = false
@@ -91,7 +91,7 @@ class MemeCollectionViewController: UICollectionViewController {
         detailController.memeIndex = indexPath.row
         
         // display view controller
-        self.navigationController?.pushViewController(detailController, animated: true)
+        navigationController?.pushViewController(detailController, animated: true)
     }
 
     
