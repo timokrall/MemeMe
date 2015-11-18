@@ -54,7 +54,7 @@ class MemeCollectionViewController: UICollectionViewController {
 
     
     // MARK: collection view setup
-    
+    // collection view corrected after comparing with https://github.com/FrazJ/MemeMe-v2.0.git
     
     // essential collection view function: how many items
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

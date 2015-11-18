@@ -38,6 +38,7 @@ class MemeTableViewController: UITableViewController {
     
     
     // MARK: table view setup
+    // table view corrected after comparing with https://github.com/FrazJ/MemeMe-v2.0.git
     
     
     // essential table function: how many cells
