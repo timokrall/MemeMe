@@ -242,8 +242,8 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         navBar.hidden = true
         
         // render view to an image
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
         let memedImage =
         UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()

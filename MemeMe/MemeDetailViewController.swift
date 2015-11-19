@@ -90,7 +90,7 @@ class MemeDetailViewController: UIViewController {
         (UIApplication.sharedApplication().delegate as! AppDelegate).memes.removeAtIndex(memeIndex)
         
         // return to MemeCollectionViewController after meme is deleted
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        navigationController?.popToRootViewControllerAnimated(true)
     
     }
     
