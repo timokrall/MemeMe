@@ -154,7 +154,6 @@ UINavigationControllerDelegate, UITextFieldDelegate {
                 attributes: memeTextAttributes,
                 alignment: .Center)
             
-            
             // temporarily deactivate sharing button if new meme is created
             deactivateButtons()
             
@@ -175,7 +174,6 @@ UINavigationControllerDelegate, UITextFieldDelegate {
             
             imagePickerView.image = memeToEdit.originalImage
             
-            
             // ensure sharing button is active if existing meme is edited
             activateButtons()
         }
@@ -188,7 +186,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // dispose of any resources that can be recreated
     }
     
     

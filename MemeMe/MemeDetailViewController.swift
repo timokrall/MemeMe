@@ -52,7 +52,7 @@ class MemeDetailViewController: UIViewController {
         toolbarItems = [spacer, trash, spacer]
         navigationController?.setToolbarHidden(false, animated: true)
         
-        // shift toolbar down to cover tab bar
+        // shift meme detail controller toolbar down to cover tab bar
         // code suggested by laneseals https://discussions.udacity.com/t/why-is-the-toolbar-automatically-shifted-upwards/38693
         navigationController?.toolbar.layer.position.y = (navigationController?.toolbar.layer.position.y)! + (tabBarController?.tabBar.bounds.height)!
 
@@ -63,6 +63,9 @@ class MemeDetailViewController: UIViewController {
         
         // show tab bar
         tabBarController?.tabBar.hidden = false
+        
+        // hide meme detail controller toolbar
+        navigationController?.setToolbarHidden(true, animated: false)
         
     }
     
