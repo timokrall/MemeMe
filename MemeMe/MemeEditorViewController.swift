@@ -128,6 +128,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         // hide navigation bar
         // code found at http://stackoverflow.com/questions/29209453/how-to-hide-a-navigation-bar-from-first-viewcontroller-in-swift
         navigationController?.navigationBarHidden = true
+
         
     }
     
